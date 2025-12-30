@@ -1,0 +1,16 @@
+name: GolphineMC
+version: '1.0-SNAPSHOT'
+main: com.freitaseric.golphinemc.golphinemc.GolphineMCPaper
+api-version: '1.21'
+authors: [Eric Freitas]
+website: https://plugins.freitaseric.com/golphinemc
+dependencies:
+  server:
+    floodgate:
+      load: BEFORE
+      required: true
+      join-classpath: true
+    LuckPerms:
+      load: BEFORE
+      required: true
+      join-classpath: true

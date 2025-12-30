@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "golphinemc",
+  "version": "${version}",
+  "name": "GolphineMC",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/golphinemc/icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.freitaseric.golphinemc.golphinemc.client.GolphineMCFabricDataGenerator"
+    ],
+    "main": [
+      "com.freitaseric.golphinemc.golphinemc.GolphineMCFabric"
+    ]
+  },
+  "mixins": [
+    "golphinemc.mixins.json",
+    {
+      "config": "golphinemc.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-language-kotlin": ">=${kotlin_loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  },
+  "suggests": {
+    "floodgate": "*",
+    "luckperms": "*"
+  }
+}
